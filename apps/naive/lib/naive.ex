@@ -12,7 +12,13 @@ defmodule Naive do
       :world
 
   """
+  alias Streamer.Binance.TradeEvent
+
   def hello do
     :world
+  end
+
+  def send_event(%TradeEvent{} = event) do
+    GenServer.cast(:trader, event)
   end
 end

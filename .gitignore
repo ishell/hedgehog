@@ -34,3 +34,5 @@ erl_crash.dump
 /.eunit
 .elixir.plt
 .elixir_ls/
+
+config/secrets.exs

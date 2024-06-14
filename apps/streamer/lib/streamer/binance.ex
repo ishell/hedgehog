@@ -38,6 +38,8 @@ defmodule Streamer.Binance do
       :buyer_market_maker => event["m"]
     }
 
+    Naive.send_event(trade_event)
+
     Logger.debug(
       "Trade event received " <>
         "#{trade_event.symbol}@#{trade_event.price}@#{trade_event.quantity}"
